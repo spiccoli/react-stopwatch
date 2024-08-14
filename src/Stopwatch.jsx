@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react";
 function Stopwatch() {
   const [isRunning, setIsRunning] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
-  let intervalRef = useRef(null); // I make use of the object useRef to prevent potential misbehaviour later
+  let intervalRef = useRef(null); 
   let startTimeRef = useRef(0);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Stopwatch() {
     }
     return () => {
       clearInterval(intervalRef.current);
-    }; //cleanup
+    }; //cleanup to prevent potential misbehaviour 
   }, [isRunning]);
 
   function start() {
