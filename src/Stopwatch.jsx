@@ -6,7 +6,7 @@ function Stopwatch() {
   let intervalRef = useRef(null); 
   let startTimeRef = useRef(0);
 
-  useEffect(() => {
+  useEffect(() => {  // this will be what updates the counter, I set the interval of the updates to be 11 milliseconds
     if (isRunning) {
       intervalRef.current = setInterval(() => {
         setElapsedTime(Date.now() - startTimeRef.current);
