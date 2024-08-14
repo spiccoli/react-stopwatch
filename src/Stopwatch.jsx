@@ -28,7 +28,7 @@ function Stopwatch() {
     setElapsedTime(0);
     setIsRunning(false);
   }
-  function formatTime() {
+  function formatTime() { // changes the millisenconds since epoch to the respective unit
     let hours = Math.floor(elapsedTime / (1000 * 60 * 60))
       .toString()
       .padStart(2, 0);
