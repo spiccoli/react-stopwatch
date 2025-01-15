@@ -6,7 +6,7 @@ function Stopwatch() {
   let intervalRef = useRef(null); 
   let startTimeRef = useRef(0);
 
-  useEffect(() => {  // this will be what updates the counter, I set the interval of the updates to be 11 milliseconds
+  useEffect(() => {
     if (isRunning) {
       intervalRef.current = setInterval(() => {
         setElapsedTime(Date.now() - startTimeRef.current);
@@ -14,7 +14,7 @@ function Stopwatch() {
     }
     return () => {
       clearInterval(intervalRef.current);
-    }; //cleanup to prevent potential misbehaviour 
+    }; 
   }, [isRunning]);
 
   function start() {
@@ -28,7 +28,7 @@ function Stopwatch() {
     setElapsedTime(0);
     setIsRunning(false);
   }
-  function formatTime() { // changes the millisenconds since epoch to the respective unit
+  function formatTime() {
     let hours = Math.floor(elapsedTime / (1000 * 60 * 60))
       .toString()
       .padStart(2, 0);
@@ -43,13 +43,14 @@ function Stopwatch() {
       .padStart(2, 0);
     return `${hours}:${minutes}:${seconds}:${miliseconds}`;
   }
+
   return (
     <div className="stopwatch-container">
       <div className="display">
         <div className="display-time">{formatTime()}</div>
-        <button onClick={start}>start</button>
-        <button onClick={pause}>pause</button>
-        <button onClick={reset}>reset</button>
+        <button onClick={start}>Start</button>
+        <button onClick={pause}>Pause</button>
+        <button onClick={reset}>Reset</button>
       </div>
     </div>
   );
