@@ -1,2 +1,3 @@
 # [https://spiccoli.github.io/react-stopwatch/](https://spiccoli.github.io/react-stopwatch/) ⏱️⏱️⏱️
-[![image](https://github.com/user-attachments/assets/3ec9f91f-1ab2-48eb-9331-1365ae7d0584)](https://spiccoli.github.io/react-stopwatch/)
+![image](https://github.com/user-attachments/assets/95977de1-e43a-42a9-9587-e2e7f0f7f098)
+
